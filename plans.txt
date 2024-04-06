@@ -1,0 +1,24 @@
+- Buscador de Cupons
+- Buscador e Comparador de Preços
+- Afiliação com o máximo de lojas confiáveis possíveis
+- Observador de Preços (Notificação)
+
+* Mostrar detalhes sobre a economia que irá ter ao migrar para a opção sugerida;
+
+--------------------------------------------------------------------------------
+
+Algoritmo do Scraping
+- Identificar se a página atual é uma página de produto
+
+- Extrair informações do produto da página atual
+
+- Fazer o scraping desse produto em outras lojas
+  * A ideia inicial aqui para identificar o produto em
+    outras lojas é utilizar palavras chaves como nome do
+    produto, marca e modelo por exemplo, e tentar dar "match"
+    com os produtos das outras lojas
+
+- Comparar os preços encontrados e retornar o mais barato e a porcentagem
+  de economia que irá receber em cima da compra
+
+- Notificar o usuário com uma "alert bar" ou modal (ideia mutável).

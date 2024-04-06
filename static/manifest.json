@@ -1,0 +1,23 @@
+{
+  "name": "Preço Certo",
+  "description": "Te ajuda a economizar comparando preços nas principais lojas do Brasil! 😉",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "./assets/extension-icons/icon_16.png",
+    "32": "./assets/extension-icons/icon_32.png",
+    "64": "./assets/extension-icons/icon_64.png",
+    "128": "./assets/extension-icons/icon_128.png"
+  },
+  "permissions": [ "tabs", "scripting", "identity" ],
+  "host_permissions": [ "https://*/*" ],
+  "background": {
+    "service_worker": "./serviceWorker.bundle.js"
+  },
+  "content_scripts": [ {
+    "matches": [ "*://*/*" ],
+    "js": [ "./script.bundle.js" ],
+    "css": [ "./style.css" ],
+    "run_at": "document_end"
+  } ]
+}

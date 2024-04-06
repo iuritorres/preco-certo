@@ -1,0 +1,120 @@
+--- # STORES # ---
++ Shopee
+- Shein
+- Amazon
+- AliExpress
+- Americanas
+- Magazine Luíza
+- Voitto
+- Mais Mu
+- KaBuM
+- C&A
+- Calvin Klein
+- Cama inBox
+- Carrefour
+- Centauro
+- Acer
+- Adcos
+- Anjuss
+- Ano Zero
+- Beleza na Web
+- Bendita Seja
+- Besni
+- BoBo
+- Brastemp
+- Brinox
+- Cerveja Box
+- Cestas Michelli
+- Chico Rei
+- Clinique
+- Clovis Calçados
+- Cobasi
+- Compra Certa
+- Consul
+- Continental
+- CPM Office
+- Dakota
+- Decanter
+- Dentro da História
+- Divinalu
+- Dudalina
+- Dzarm
+- Elare
+- eLens
+- Eletrum
+- Eleve Life
+- Engage Eletro
+- Eótica
+- Espaço Hering
+- Estoque
+- Estuda.com
+- Eudora
+- Euro Relógios
+- Ferramentas Kennedy
+- FOM
+- Forever Liss
+- Girafa
+- Giuliana Flores
+- GrandVision
+- Grupo A - educação
+- Herbia
+- Hering
+- Home is
+- Infinix
+- iPlace
+- Jo Malone
+- John John
+- Kaspersky
+- KitchenAid
+- Laura Mercier
+- Lego
+- LeLisBlanc
+- Leo Madeiras
+- LG
+- Liz
+- MAC
+- Madeira Madeira
+- Mizuno
+- Mobly
+- Mundos Infinitos
+- NARS
+- Natura
+- Netshoes
+- Nova Flor
+- O Boticário
+- Olympikus
+- Osklen
+- Overboard
+- Pdv print
+- Pneu Store
+- Pop Me
+- Portal Pós
+- Pós Anhanguera
+- Positivo
+- Positivo Casa Inteligente
+- Probel
+- Puma
+- Quem disse berenice
+- RiHappy
+- Rovitex
+- Samsung
+- Sestini
+- Shiseido
+- Shopclub
+- Souq Store
+- Spicy
+- Studio Z
+- Swift
+- Tanara
+- taQI
+- Technos
+- Tjama
+- Trocafone
+- Tudo de Bicho
+- Viva Vinho
+- Web Continental
+- Webfones
+- Wondershare
+- World Tennis
+- Zattini
+- ZZ Mall
