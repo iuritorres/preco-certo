@@ -1,7 +1,7 @@
 {
   "name": "preco-certo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Te ajuda a economizar comparando preços nas principais lojas do Brasil! 😉",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "node-polyfill-webpack-plugin": "^3.0.0"
+  },
   "devDependencies": {
     "copy-webpack-plugin": "^12.0.2",
     "webpack": "^5.91.0",

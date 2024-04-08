@@ -1,5 +1,6 @@
 const path = require("path")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
+// const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -16,5 +17,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: "static" }],
     }),
+    // new NodePolyfillPlugin(),
   ],
 }
