@@ -9,8 +9,11 @@
     "64": "./assets/extension-icons/icon_64.png",
     "128": "./assets/extension-icons/icon_128.png"
   },
-  "permissions": [ "tabs", "scripting", "identity" ],
+  "permissions": [ "tabs", "activeTab", "scripting", "identity" ],
   "host_permissions": [ "https://*/*" ],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
     "service_worker": "./serviceWorker.bundle.js"
   },

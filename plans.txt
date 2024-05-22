@@ -5,6 +5,8 @@
 
 * Mostrar detalhes sobre a economia que irá ter ao migrar para a opção sugerida;
 
+* AWS - Amplify
+
 --------------------------------------------------------------------------------
 
 Algoritmo do Scraping
