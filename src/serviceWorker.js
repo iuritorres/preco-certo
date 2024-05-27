@@ -90,4 +90,24 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
     return true;
   }
+
+  if (request.event === Events.REQUEST_MAGAZINE_LUIZA) {
+    try {
+      const url = Scrapers['MAGAZINE_LUIZA'].baseUrls[0];
+
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Erro ao fazer requisição para ${url}`);
+          }
+
+          return response.text();
+        })
+        .then((html) => sendResponse({ html }));
+    } catch (error) {
+      throw new error();
+    }
+
+    return true;
+  }
 });
