@@ -1,6 +1,6 @@
-import { Events } from './constants/events';
-import { Injectors } from './constants/injectors';
-import { Scrapers } from './constants/scrapers';
+import { Events } from "./constants/events";
+import { Injectors } from "./constants/injectors";
+import { Scrapers } from "./constants/scrapers";
 
 // chrome.runtime.onInstalled.addListener(({ reason }) => {
 //   if (reason === "install") {
@@ -36,28 +36,16 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.event === Events.REQUEST_SEARCH_PRODUCT) {
     try {
-      const requestData = request.requestData;
-      const cookieHeader =
-        'FCCDCF=1; FCNEC=1; MLPARCEIRO=0; mixer_hub_shipping=true; mixer_shipping=AUTO; ml2_redirect_8020=0; noe_freight=AUTO; noe_hub_shipping_enabled=1; toggle_ads=true; toggle_agatha=true; toggle_new_service_page=true; toggle_pdp_seller_score=true; toggle_search_ads=true; toggle_vwo=true; toggle_wishlist=false; __uzma=a06fa7ad-0a61-4d3e-843e-4b3aed259db5; __uzmb=1714683493; __uzmc=675681942700; __uzmd=1714684882; __uzme=1999';
       const formattedProductName = request.productName
         .toLowerCase()
-        .replace('/', '')
-        .replace('\\', '')
-        .replace('-', '')
-        .replace('_', '')
-        .replaceAll(' ', '%2B');
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/ /g, "+")
+        .replace(/[^a-z0-9+]/g, "");
 
-      const requestURL = `${Scrapers['MAGAZINE_LUIZA'].baseUrls[0]}/_next/data/${requestData}/busca/${formattedProductName}.json?path1=${formattedProductName}`;
+      const requestURL = `${Scrapers["MAGAZINE_LUIZA"].baseUrls[0]}/busca/${formattedProductName}/?from=submit`;
 
-      fetch(requestURL, {
-        method: 'GET',
-        headers: {
-          Accept: '*/*',
-          Cookie: cookieHeader,
-          Connection: 'keep-alive',
-          'Accept-Encoding': 'gzip, deflate, br',
-        },
-      })
+      fetch(requestURL)
         .then((result) => {
           try {
             return result.json();
@@ -82,7 +70,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         });
     } catch (error) {
       console.error(
-        `Erro ao fazer requisição para ${Scrapers['MAGAZINE_LUIZA'].baseUrls[0]}`
+        `Erro ao fazer requisição para ${Scrapers["MAGAZINE_LUIZA"].baseUrls[0]}`
       );
 
       throw error;
@@ -93,7 +81,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
   if (request.event === Events.REQUEST_MAGAZINE_LUIZA) {
     try {
-      const url = Scrapers['MAGAZINE_LUIZA'].baseUrls[0];
+      const url = Scrapers["MAGAZINE_LUIZA"].baseUrls[0];
 
       fetch(url)
         .then((response) => {

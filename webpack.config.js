@@ -1,5 +1,5 @@
-const path = require("path")
-const CopyWebpackPlugin = require("copy-webpack-plugin")
+const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 // const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
@@ -11,6 +11,9 @@ module.exports = {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
+  optimization: {
+    minimize: false,
+  },
   mode: "production",
   watch: true,
   plugins: [
@@ -19,4 +22,4 @@ module.exports = {
     }),
     // new NodePolyfillPlugin(),
   ],
-}
+};
